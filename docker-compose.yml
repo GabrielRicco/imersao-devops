@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    container_name: imersao-devops-api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Monta o diretório atual no contêiner para refletir as alterações de código (hot-reload).
+      # O banco de dados escola.db também será persistido no host.
+      - .:/app
